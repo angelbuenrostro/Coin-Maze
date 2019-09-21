@@ -14,6 +14,9 @@
 		A24FEAB423366D7F006E823C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A24FEAB323366D7F006E823C /* Preview Assets.xcassets */; };
 		A24FEAB723366D7F006E823C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A24FEAB523366D7F006E823C /* LaunchScreen.storyboard */; };
 		A24FEAC023366D9D006E823C /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24FEABF23366D9D006E823C /* Room.swift */; };
+		A24FEAC3233676EB006E823C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24FEAC2233676EB006E823C /* Constants.swift */; };
+		A24FEAC52336913B006E823C /* Proof.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24FEAC42336913B006E823C /* Proof.swift */; };
+		A24FEAC723369198006E823C /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24FEAC623369198006E823C /* Balance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		A24FEAB623366D7F006E823C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A24FEAB823366D7F006E823C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A24FEABF23366D9D006E823C /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		A24FEAC2233676EB006E823C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A24FEAC42336913B006E823C /* Proof.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proof.swift; sourceTree = "<group>"; };
+		A24FEAC623369198006E823C /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		A24FEAA923366D78006E823C /* Coin Maze */ = {
 			isa = PBXGroup;
 			children = (
+				A24FEAC1233676D6006E823C /* Private */,
 				A24FEABE23366D8C006E823C /* Models */,
 				A24FEAAA23366D78006E823C /* AppDelegate.swift */,
 				A24FEAAC23366D78006E823C /* SceneDelegate.swift */,
@@ -82,8 +89,18 @@
 			isa = PBXGroup;
 			children = (
 				A24FEABF23366D9D006E823C /* Room.swift */,
+				A24FEAC42336913B006E823C /* Proof.swift */,
+				A24FEAC623369198006E823C /* Balance.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A24FEAC1233676D6006E823C /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				A24FEAC2233676EB006E823C /* Constants.swift */,
+			);
+			path = Private;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,9 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A24FEAC52336913B006E823C /* Proof.swift in Sources */,
+				A24FEAC3233676EB006E823C /* Constants.swift in Sources */,
 				A24FEAAB23366D78006E823C /* AppDelegate.swift in Sources */,
 				A24FEAAD23366D78006E823C /* SceneDelegate.swift in Sources */,
 				A24FEAC023366D9D006E823C /* Room.swift in Sources */,
+				A24FEAC723369198006E823C /* Balance.swift in Sources */,
 				A24FEAAF23366D78006E823C /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
