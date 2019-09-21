@@ -17,5 +17,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            // 1366 x 1024 Ipad Pro Landscape Point Size
+            .previewLayout(.fixed(width: 1366,
+                                height: 1024))
     }
 }
