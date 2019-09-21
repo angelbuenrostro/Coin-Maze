@@ -32,6 +32,38 @@ class APIController {
         var request = URLRequest(url: constants.initURL)
         request.httpMethod = HTTPMethod.get.rawValue
         request.addValue("Token \(constants.apiKey)", forHTTPHeaderField: "Authorization")
+        
         // Decode JSON while handling errors
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let response = response as? HTTPURLResponse,
+                response.statusCode == 401 {
+                completion(.failure(.badAuth))
+                return
+            }
+            
+            if let _ = error {
+                completion(.failure(.otherError))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(.badData))
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            do {
+                let room = try decoder.decode(Room.self, from: data)
+                completion(.success(room))
+            } catch {
+                completion(.failure(.noDecode))
+            }
+        }.resume()
     }
+    
+    
+    
+    
+    
+    
 }
